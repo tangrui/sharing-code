@@ -1,0 +1,29 @@
+.CodeMirror {
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius: 4px 4px 4px 4px;
+    margin-bottom: 10px;
+}
+
+.CodeMirror-scroll {
+    height: 415px;
+}
+
+.social-links {
+    list-style: none;
+}
+
+.social-links li {
+    display: inline;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.fb-like {
+    vertical-align: text-bottom;
+}

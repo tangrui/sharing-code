@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Sharing the code with your buddy!</title>
+
+        <meta name="author" content="tangrui">
+        <meta name="description" content="An easy code sharing website.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet"
+            href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold|Inconsolata|PT+Sans:400,700">
+
+        <link rel="stylesheet" href="assets/normalize.css">
+        <link rel="stylesheet" href="assets/main.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" media="screen">
+        <link rel="stylesheet" href="assets/select2/select2.css">
+        <link rel="stylesheet" href="assets/codemirror/codemirror.css">
+        <link rel="stylesheet" href="assets/codemirror/cobalt.css">
+        <link rel="stylesheet" href="assets/codemirror/spec.css">
+        <link rel="stylesheet" href="assets/codemirror/tiddlywiki.css">
+        <link rel="stylesheet" href="assets/codemirror/tiki.css">
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-inner">
+                <a class="brand">Sharing the code with your buddy!</a>
+            </div>
+        </div>
+
+        <div style="margin-top:20px;">
+            <div class="container">
+                <div class="row">
+                    <div class="span4">
+                        <form>
+                            <select id="language">
+                                <option value=""></option>
+                                <option value="clike">C</option>
+                                <option value="clojure">Clojure</option>
+                                <option value="coffeescript">CoffeeScript</option>
+                                <option value="commonlisp">CommonLisp</option>
+                                <option value="css">CSS</option>
+                                <option value="diff">Diff</option>
+                                <option value="ecl">ECL</option>
+                                <option value="erlang">Erlang</option>
+                                <option value="gfm">GFM</option>
+                                <option value="go">Go</option>
+                                <option value="groovy">Groovy</option>
+                                <option value="haskell">Haskell</option>
+                                <option value="haxe">Haxe</option>
+                                <option value="htmlembedded">Html Embedded</option>
+                                <option value="htmlmixed">Html Mixed</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="jinja2">Jinja2</option>
+                                <option value="less">Less</option>
+                                <option value="lua">Lua</option>
+                                <option value="markdown">Markdown</option>
+                                <option value="mysql">MySQL</option>
+                                <option value="ntriples">Ntriples</option>
+                                <option value="ocaml">Ocaml</option>
+                                <option value="pascal">Pascal</option>
+                                <option value="perl">Perl</option>
+                                <option value="php">PHP</option>
+                                <option value="pig">Pig</option>
+                                <option value="plsql">PL-SQL</option>
+                                <option value="properties">Properties</option>
+                                <option value="python">Python</option>
+                                <option value="r">R</option>
+                                <option value="changes">RPM Changes</option>
+                                <option value="spec">RPM Spec</option>
+                                <option value="rst">RST</option>
+                                <option value="ruby">Ruby</option>
+                                <option value="rust">Rust</option>
+                                <option value="scheme">Scheme</option>
+                                <option value="shell">Shell</option>
+                                <option value="sieve">Sieve</option>
+                                <option value="smalltalk">Smalltalk</option>
+                                <option value="smarty">Smarty</option>
+                                <option value="sparql">Sparql</option>
+                                <option value="stex">Stex</option>
+                                <option value="tiddlywiki">Tiddly Wiki</option>
+                                <option value="tiki">Tiki</option>
+                                <option value="vb">Visual Basic</option>
+                                <option value="vbscript">VBScript</option>
+                                <option value="velocity">Velocity</option>
+                                <option value="verilog">Verilog</option>
+                                <option value="xml">XML</option>
+                                <option value="xquery">XQuery</option>
+                                <option value="yaml">Yaml</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="span1 offset7">
+                        <a id="shareButton" class="btn btn-primary">Share</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12">
+                        <div class="alert alert-info">Paste your code bellow, and copy the link address of the Share button above by right click it.</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12">
+                        <textarea id="codeArea" rows="20" class="span12" placeholder="then paste your code here!"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12 center">
+                        <ul class="social-links">
+                            <li>
+                                <a href="https://twitter.com/pasthero" class="twitter-follow-button" data-show-count="false">Follow @pasthero</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-via="pasthero">Tweet</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            </li>
+                            <li>
+                                <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                            </li>
+                            <li>
+                                <div class="g-plusone" data-size="medium" data-annotation="none"></div>
+                                <script>
+                                    (function() {
+                                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                        po.src = 'https://apis.google.com/js/plusone.js';
+                                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                    })();
+                                </script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="scripts/libs/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="scripts/libs/bootstrap.js"></script>
+        <script src="scripts/libs/select2.js"></script>
+        <script src="scripts/libs/codemirror.js"></script>
+        <script src="scripts/libs/codemirror/mode/clike/clike.js"></script>
+        <script src="scripts/libs/codemirror/mode/clojure/clojure.js"></script>
+        <script src="scripts/libs/codemirror/mode/coffeescript/coffeescript.js"></script>
+        <script src="scripts/libs/codemirror/mode/commonlisp/commonlisp.js"></script>
+        <script src="scripts/libs/codemirror/mode/css/css.js"></script>
+        <script src="scripts/libs/codemirror/mode/diff/diff.js"></script>
+        <script src="scripts/libs/codemirror/mode/ecl/ecl.js"></script>
+        <script src="scripts/libs/codemirror/mode/erlang/erlang.js"></script>
+        <script src="scripts/libs/codemirror/mode/gfm/gfm.js"></script>
+        <script src="scripts/libs/codemirror/mode/go/go.js"></script>
+        <script src="scripts/libs/codemirror/mode/groovy/groovy.js"></script>
+        <script src="scripts/libs/codemirror/mode/haskell/haskell.js"></script>
+        <script src="scripts/libs/codemirror/mode/haxe/haxe.js"></script>
+        <script src="scripts/libs/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+        <script src="scripts/libs/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+        <script src="scripts/libs/codemirror/mode/javascript/javascript.js"></script>
+        <script src="scripts/libs/codemirror/mode/jinja2/jinja2.js"></script>
+        <script src="scripts/libs/codemirror/mode/less/less.js"></script>
+        <script src="scripts/libs/codemirror/mode/lua/lua.js"></script>
+        <script src="scripts/libs/codemirror/mode/markdown/markdown.js"></script>
+        <script src="scripts/libs/codemirror/mode/mysql/mysql.js"></script>
+        <script src="scripts/libs/codemirror/mode/ntriples/ntriples.js"></script>
+        <script src="scripts/libs/codemirror/mode/ocaml/ocaml.js"></script>
+        <script src="scripts/libs/codemirror/mode/pascal/pascal.js"></script>
+        <script src="scripts/libs/codemirror/mode/perl/perl.js"></script>
+        <script src="scripts/libs/codemirror/mode/php/php.js"></script>
+        <script src="scripts/libs/codemirror/mode/pig/pig.js"></script>
+        <script src="scripts/libs/codemirror/mode/plsql/plsql.js"></script>
+        <script src="scripts/libs/codemirror/mode/properties/properties.js"></script>
+        <script src="scripts/libs/codemirror/mode/python/python.js"></script>
+        <script src="scripts/libs/codemirror/mode/r/r.js"></script>
+        <script src="scripts/libs/codemirror/mode/rpm/changes/changes.js"></script>
+        <script src="scripts/libs/codemirror/mode/rpm/spec/spec.js"></script>
+        <script src="scripts/libs/codemirror/mode/rst/rst.js"></script>
+        <script src="scripts/libs/codemirror/mode/ruby/ruby.js"></script>
+        <script src="scripts/libs/codemirror/mode/rust/rust.js"></script>
+        <script src="scripts/libs/codemirror/mode/scheme/scheme.js"></script>
+        <script src="scripts/libs/codemirror/mode/shell/shell.js"></script>
+        <script src="scripts/libs/codemirror/mode/sieve/sieve.js"></script>
+        <script src="scripts/libs/codemirror/mode/smalltalk/smalltalk.js"></script>
+        <script src="scripts/libs/codemirror/mode/smarty/smarty.js"></script>
+        <script src="scripts/libs/codemirror/mode/sparql/sparql.js"></script>
+        <script src="scripts/libs/codemirror/mode/stex/stex.js"></script>
+        <script src="scripts/libs/codemirror/mode/tiddlywiki/tiddlywiki.js"></script>
+        <script src="scripts/libs/codemirror/mode/tiki/tiki.js"></script>
+        <script src="scripts/libs/codemirror/mode/vb/vb.js"></script>
+        <script src="scripts/libs/codemirror/mode/vbscript/vbscript.js"></script>
+        <script src="scripts/libs/codemirror/mode/velocity/velocity.js"></script>
+        <script src="scripts/libs/codemirror/mode/verilog/verilog.js"></script>
+        <script src="scripts/libs/codemirror/mode/xml/xml.js"></script>
+        <script src="scripts/libs/codemirror/mode/xquery/xquery.js"></script>
+        <script src="scripts/libs/codemirror/mode/yaml/yaml.js"></script>
+        <script src="scripts/app/main.js"></script>
+
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-57995-5'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
