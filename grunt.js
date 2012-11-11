@@ -5,7 +5,7 @@ module.exports = function(grunt) {
                 src: [
                     'assets/normalize.css',
                     'assets/main.css',
-                    'assets/bootstrap/css/bootstrap.css',
+                    'assets/bootstrap/bootstrap.css',
                     'assets/select2/select2.css',
                     'assets/codemirror/codemirror.css',
                     'assets/codemirror/cobalt.css',
